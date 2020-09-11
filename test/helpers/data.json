@@ -1,0 +1,15 @@
+{
+    "homePage": {
+        "username": "standard_user",
+        "lockUser": "locked_out_user",
+        "password": "secret_sauce",
+        "url": "index.html",
+        "msgError": "Epic sadface: Sorry, this user has been locked out."
+    },
+    "inventoryPage":{
+        "url": "inventory.html",
+        "sortProducts":{
+            "default": "Sauce Labs Backpack"
+        }
+    }
+}
