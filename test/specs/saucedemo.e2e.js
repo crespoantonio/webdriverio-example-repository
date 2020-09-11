@@ -1,6 +1,7 @@
 const data = require('../helpers/data.json')
 const HomePage = require('../pageobjects/home.page');
 const InventoryPage = require('../pageobjects/inventory.page')
+const CartPage = require('../pageobjects/cart.page')
 
 describe('My project portfolio on WebDriverIO', ()=>{
 
@@ -38,6 +39,14 @@ describe('My project portfolio on WebDriverIO', ()=>{
     it('Should sort products for Price (High to Low)', ()=>{
         InventoryPage.selectProductSortContainer.selectByAttribute('value', 'hilo');
         expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.hToL)
+    });
+
+    it('Should add 3 item to the cart', ()=>{
+        for(let i=0; i<=3; i++){
+            InventoryPage.addNewItem(i)
+        }
+        CartPage.open();
+        expect(CartPage.itemsOnCart).toHaveLength(4);
     });
 
     it('Should Logout', ()=>{
