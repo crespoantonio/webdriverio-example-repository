@@ -7,6 +7,10 @@ class InventoryPage {
     get firstItemInventory(){return $('.inventory_list > :nth-child(1) .inventory_item_name')}
     get selectProductSortContainer(){return $('.product_sort_container')}
 
+    open(){
+        return super.open('/inventory.html')
+    }
+
     openMenu(){
         this.btnMenu.click();
         expect(this.divMenuSideRight).toBeVisible()
