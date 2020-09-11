@@ -26,5 +26,29 @@ describe('My project portfolio on WebDriverIO', ()=>{
         HomePage.login(data.homePage.username, data.homePage.password);
         InventoryPage.logout()
         expect(browser).toHaveUrlContaining(data.homePage.url)
-    })
+    });
+
+    it('Should sort products A to Z', ()=>{
+        HomePage.login(data.homePage.username, data.homePage.password);
+        InventoryPage.selectProductSortContainer.selectByAttribute('value', 'az');
+        expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.default);
+    });
+
+    it('Should sort products Z to A', ()=>{
+        HomePage.login(data.homePage.username, data.homePage.password);
+        InventoryPage.selectProductSortContainer.selectByAttribute('value', 'za');
+        expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.zToA)
+    });
+
+    it('Should sort products for Price (Low to High)', ()=>{
+        HomePage.login(data.homePage.username, data.homePage.password);
+        InventoryPage.selectProductSortContainer.selectByAttribute('value', 'lohi');
+        expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.lToH)
+    });
+
+    it('Should sort products for Price (High to Low)', ()=>{
+        HomePage.login(data.homePage.username, data.homePage.password);
+        InventoryPage.selectProductSortContainer.selectByAttribute('value', 'hilo');
+        expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.hToL)
+    });
 });

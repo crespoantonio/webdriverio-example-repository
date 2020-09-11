@@ -5,6 +5,7 @@ class InventoryPage {
     get aLogout(){return $('#logout_sidebar_link')}
     get aResetApp(){return $('logout_sidebar_link')}
     get firstItemInventory(){return $('.inventory_list > :nth-child(1) .inventory_item_name')}
+    get selectProductSortContainer(){return $('.product_sort_container')}
 
     openMenu(){
         this.btnMenu.click();

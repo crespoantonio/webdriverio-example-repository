@@ -9,7 +9,10 @@
     "inventoryPage":{
         "url": "inventory.html",
         "sortProducts":{
-            "default": "Sauce Labs Backpack"
+            "default": "Sauce Labs Backpack",
+            "zToA": "Test.allTheThings() T-Shirt (Red)",
+            "lToH": "Sauce Labs Onesie",
+            "hToL": "Sauce Labs Fleece Jacket"
         }
     }
 }
