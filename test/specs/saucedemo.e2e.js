@@ -3,7 +3,7 @@ const HomePage = require('../pageobjects/home.page');
 const InventoryPage = require('../pageobjects/inventory.page')
 const CartPage = require('../pageobjects/cart.page')
 
-describe('My project portfolio on WebDriverIO', ()=>{
+describe('My project portfolio in WebDriverIO', ()=>{
 
     before(()=>{
         HomePage.maximizeWindow();
