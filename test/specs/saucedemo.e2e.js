@@ -27,21 +27,21 @@ describe('My project portfolio on WebDriverIO', ()=>{
     });
     
     it('Should sort products Z to A', ()=>{
-        InventoryPage.orderyByAtributte('value', 'za');
+        InventoryPage.orderyByValue('za');
         expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.zToA)
     });
     
     it('Should sort products for Price (Low to High)', ()=>{
-        InventoryPage.orderyByAtributte('value', 'lohi');
+        InventoryPage.orderyByValue('lohi');
         expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.lToH)
     });
     
     it('Should sort products for Price (High to Low)', ()=>{
-        InventoryPage.orderyByAtributte('value', 'hilo');
+        InventoryPage.orderyByValue('hilo');
         expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.hToL)
     });
 
-    it('Should add 3 item to the cart', ()=>{
+    it('Should add 4 item to the cart', ()=>{
         for(let i=0; i<=3; i++){
             InventoryPage.addNewItem(i)
         }
