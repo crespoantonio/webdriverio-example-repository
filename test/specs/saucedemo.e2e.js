@@ -27,17 +27,17 @@ describe('My project portfolio on WebDriverIO', ()=>{
     });
     
     it('Should sort products Z to A', ()=>{
-        InventoryPage.selectProductSortContainer.selectByAttribute('value', 'za');
+        InventoryPage.orderyByAtributte('value', 'za');
         expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.zToA)
     });
     
     it('Should sort products for Price (Low to High)', ()=>{
-        InventoryPage.selectProductSortContainer.selectByAttribute('value', 'lohi');
+        InventoryPage.orderyByAtributte('value', 'lohi');
         expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.lToH)
     });
     
     it('Should sort products for Price (High to Low)', ()=>{
-        InventoryPage.selectProductSortContainer.selectByAttribute('value', 'hilo');
+        InventoryPage.orderyByAtributte('value', 'hilo');
         expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.hToL)
     });
 

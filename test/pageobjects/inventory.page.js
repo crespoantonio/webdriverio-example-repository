@@ -38,6 +38,10 @@ class InventoryPage extends Page {
         this.findItem[item].click();
         expect(this.findItem[item]).toHaveText('REMOVE');
     }
+
+    orderyByAtributte(atribute, value){
+        this.selectProductSortContainer.selectByAttribute(atribute, value)
+    }
 }
 
 module.exports = new InventoryPage();
