@@ -22,7 +22,7 @@ describe('My project portfolio on WebDriverIO', ()=>{
     });
         
     it('Should sort products A to Z', ()=>{
-        InventoryPage.selectProductSortContainer.selectByAttribute('value', 'az');
+        InventoryPage.orderyByAttribute('az');
         expect(InventoryPage.firstItemInventory).toHaveText(data.inventoryPage.sortProducts.default);
     });
     
