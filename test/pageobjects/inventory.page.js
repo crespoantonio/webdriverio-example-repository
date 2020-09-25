@@ -39,7 +39,7 @@ class InventoryPage extends Page {
         expect(this.findItem[item]).toHaveText('REMOVE');
     }
 
-    orderyByValue(value){
+    orderyByAttribute(value){
         this.selectProductSortContainer.selectByAttribute('value', value)
     }
 }
